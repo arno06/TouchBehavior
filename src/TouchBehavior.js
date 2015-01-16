@@ -1,5 +1,5 @@
 /**
- * @author Arno NICOLAS - arno06@gmail.com
+ * @author Arnoob NICOLAS - arno06@gmail.com
  */
 if (NodeList.prototype.forEach === undefined)
     NodeList.prototype.forEach = Array.prototype.forEach || function(pHandler){for(var i = 0, max = this.length; i<max; i++){pHandler(this[i], i);}};
