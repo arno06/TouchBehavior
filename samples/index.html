@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TouchBehavior.js - sample</title>
+        <script src="../src/TouchBehavior.js"></script>
+        <style>
+
+            body
+            {
+                -webkit-touch-callout: none;
+                -webkit-text-size-adjust: none;
+                -webkit-user-select: none;
+            }
+
+            *{margin:0;padding:0;}
+
+            a{
+                color:#444444;
+            }
+            a.active{
+                text-decoration: none;
+            }
+
+            div{
+                margin-top:10px;
+                background:#ffffff;
+                color:#444444;
+                padding:10px;
+                transition:all .3s;
+                -webkit-transition:all .3s;
+                -moz-transition:all .3s;
+            }
+
+            div.active{
+                background:#444444;
+                color:#ffffff;
+            }
+
+        </style>
+        <script>
+
+            function init()
+            {
+                TouchBehavior.applyTo('a, div');
+
+                document.querySelector("a").addEventListener(TouchBehavior.clickEvent, function()
+                {
+                    console.log("'a' tag clicked");
+                }, false);
+
+                document.querySelector("div").addEventListener(TouchBehavior.clickEvent, function()
+                {
+                    console.log("'div' tag clicked");
+                }, false);
+            }
+
+            window.addEventListener("load", init, false);
+        </script>
+    </head>
+    <body>
+        <a href="#">Simple Link</a>
+        <div>Some block</div>
+    </body>
+</html>
