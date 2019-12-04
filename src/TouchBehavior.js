@@ -57,9 +57,9 @@ var TouchBehavior =
                 if (todo)
                     t.classList[todo](pClassName);
             };
-            pElement.addEventListener(TouchBehavior.downEvent, handler);
-            pElement.addEventListener(TouchBehavior.moveEvent, handler);
-            pElement.addEventListener(TouchBehavior.upEvent, handler);
+            pElement.addEventListener(TouchBehavior.downEvent, handler, {passive:true});
+            pElement.addEventListener(TouchBehavior.moveEvent, handler, {passive:true});
+            pElement.addEventListener(TouchBehavior.upEvent, handler, {passive:true});
         });
     }
 };
